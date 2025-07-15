@@ -6,11 +6,11 @@ on:
 
 jobs:
   build-test:
-    name: Test on Ubuntu
+    name: Test on macOS
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [macos-latest]
 
     steps:
     - uses: actions/checkout@v3
