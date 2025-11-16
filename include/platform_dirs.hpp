@@ -12,8 +12,10 @@
 #endif
 #endif
 
-namespace std::filesystem
+namespace PlatformDirs
 {
+using namespace std::filesystem;
+
 #if defined(__ANDROID__)
     inline static JNIEnv* g_env = nullptr;
     inline static jobject g_ctx = nullptr;
@@ -70,4 +72,4 @@ namespace std::filesystem
         return std::filesystem::temp_directory_path();
     }
 
-} // namespace std::filesystem
+} // namespace PlatformDirs
